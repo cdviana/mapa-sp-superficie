@@ -822,7 +822,7 @@ $(function () {
       $("#" + regions[i].region_code)
         .css({
           fill:
-            "rgba(61, 51, 43," +
+            "rgba(102, 0, 204," +
             (regions[i].total_moradias * 2) / highest_value +
             ")"
         })
