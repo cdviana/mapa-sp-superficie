@@ -10,7 +10,7 @@
 /*preenchimento padrão do mapa*/
 .map path {
   fill: #ccc;
-  stroke: #716f87;
+  stroke: #bbafc4;
   stroke-width: 1;
 }
 /*caracteríticas quando o mouse passa por cima do mapa*/
