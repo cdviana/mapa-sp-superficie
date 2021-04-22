@@ -772,7 +772,7 @@ var regions = [
    "m2_solapa": "0,0",
    "m2_escorr_solapa": 0,
    "m2_ipt": "0,0",
-   "m2_pmsp": "0,0",
+   "m2_pmsp": 0,
    "m2_diff": "0,0"
  },
  {
