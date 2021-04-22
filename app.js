@@ -770,7 +770,7 @@ var regions = [
    "diff_m_r4": 0,
    "m2_escorr": "0,0",
    "m2_solapa": "0,0",
-   "m2_escorr_solapa": 0,
+   "m2_escorr_solapa": "0,0",
    "m2_ipt": "0,0",
    "m2_pmsp": 0,
    "m2_diff": "0,0"
@@ -808,6 +808,7 @@ var temp_array = regions.map(function (item) {
 });
 
 var highest_value = Math.max.apply(Math, temp_array);
+console.log(highest_value);
 
 //colore com base no valor anterior
 $(function () {
