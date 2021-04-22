@@ -572,7 +572,7 @@ var regions = [
    "m2_solapa": "0,0",
    "m2_escorr_solapa": "0,0",
    "m2_ipt": "0,0",
-   "m2_pmsp": "0,0",
+   "m2_pmsp": 0,
    "m2_diff": "0,0"
  },
  {
@@ -697,7 +697,7 @@ var regions = [
    "m2_solapa": "0,0",
    "m2_escorr_solapa": "0,0",
    "m2_ipt": "0,0",
-   "m2_pmsp": "0,0",
+   "m2_pmsp": 0,
    "m2_diff": "0,0"
  },
  {
@@ -770,7 +770,7 @@ var regions = [
    "diff_m_r4": 0,
    "m2_escorr": "0,0",
    "m2_solapa": "0,0",
-   "m2_escorr_solapa": "0,0",
+   "m2_escorr_solapa": 0,
    "m2_ipt": "0,0",
    "m2_pmsp": "0,0",
    "m2_diff": "0,0"
@@ -804,7 +804,7 @@ var regions = [
 
 //identificar o maior valor para colorir as subprefeituras
 var temp_array = regions.map(function (item) {
-  return item.total_moradias;
+  return item.m2_pmsp;
 });
 
 var highest_value = Math.max.apply(Math, temp_array);
@@ -812,7 +812,7 @@ var highest_value = Math.max.apply(Math, temp_array);
 //colore com base no valor anterior
 $(function () {
   for (i = 0; i < regions.length; i++) {
-    if (regions[i].total_moradias == 0) {
+    if (regions[i].m2_pmsp == 0) {
       $("#" + regions[i].region_code)
         .css({
           fill: "rgba(125,125,125)"
@@ -822,8 +822,8 @@ $(function () {
       $("#" + regions[i].region_code)
         .css({
           fill:
-            "rgba(102, 0, 204," +
-            (regions[i].total_moradias * 2) / highest_value +
+            "rgba(124, 76, 161," +
+            (regions[i].m2_pmsp * 2) / highest_value +
             ")"
         })
         .data("region", regions[i]);
